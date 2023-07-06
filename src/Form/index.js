@@ -1,11 +1,11 @@
 import "./style.css"
 
 const Form = () => (
-  <form className="form form__fieldset">
+  <form className="form">
 
 
-    <label className="form__label--value">wartość w PLN</label>
-    <label className="form__label--currency">wybierz walutę</label>
+    <label className="form__label form__label--value">wartość w PLN</label>
+    <label className="form__label form__label--currency">wybierz walutę</label>
 
 
     <div className="input__container">

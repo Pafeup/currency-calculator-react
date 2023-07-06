@@ -1,0 +1,24 @@
+.container{ 
+  border: 2px solid #333;
+  border-radius: 10px;
+  text-align: center;
+  font-size: large;
+  background-color: #444;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 900px;
+  box-shadow: 16px 16px 20px -12px rgba(66, 68, 90, 1);
+}
+
+.container__header {
+    border: 2px solid #333;
+    font-family: 'a_LCDNova', arial;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 40px;
+    font-style: italic;
+    background-color: rgb(182, 255, 63);
+    padding: 25px 20px 20px;
+    margin: 0 auto;
+    box-shadow: inset 8px 8px 20px -12px rgba(66, 68, 90, 1);
+  }
