@@ -1,17 +1,28 @@
-const curriencies = [
+const currencies = [
     {
-        name: "€ Euro"
+        name: "€ Euro",
+        code: "EUR",
+
     },
     {
-        name: "$ Dolar amerykański"
+        name: "$ Dolar amerykański",
+        code: "USD"
+
     },
     {
-        name: "£ Funt brytyjski"
+        name: "£ Funt brytyjski",
+        code: "GBP"
+
     },
     {
-        name: "₣ Frank szwajcarski"
+        name: "₣ Frank szwajcarski",
+        code: "CHF"
+
     },
     {
-        name: "¥ Jen japoński"
+        name: "¥ Jen japoński",
+        code: "JPY"
+
     },
 ]
+export {currencies}
