@@ -28,7 +28,7 @@ const Form = ({ onFormSubmit, inputValue, onInputChange, onCurrencyChange }) => 
           <option key={currency.name}>
             {currency.name}
           </option>
-          ))}
+        ))}
       </select>
 
     </div>
