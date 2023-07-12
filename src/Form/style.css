@@ -15,6 +15,17 @@
   padding: 30px;
   text-align: center;
   background-color: #555;
+  transition: 1s;
+}
+
+@media (max-width: 650px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: auto;
+  }
 }
 
 .input__container {
@@ -27,25 +38,54 @@
   grid-area: I;
   align-self: start;
 }
-/* //////////////////// */
+
+@media (max-width: 650px) {
+  .input__container {
+    visibility: hidden;
+    flex-direction: column;
+  }
+}
+
 .form__input {
-  border-radius: 8px 0px 0px 5px;
-  border: 2px solid transparent;
+  height: 48px;
+  border-radius: 8px 0px 0px 8px;
+  border: 2px solid #333;
   border-right: 1px double #ccc;
   padding-left: 10px;
   padding: 10px;
   outline: none;
-  width: min-content;
+  width: 230px;
 }
+
+@media (max-width: 650px) {
+  .form__input {
+    border-radius: 8px;
+    border: 2px solid #333;
+    padding: 10px;
+    outline: none;
+    width: 230px;
+    margin-bottom: 20px;
+    order: 2;
+  }
+}
+
 .form__select {
   border-radius: 0px 8px 8px 0px;
-  border: 2px solid transparent;
+  border: 2px solid #333;
   border-left: 0px;
-  margin-left: 12px;
   padding: 10px;
   outline: none;
   max-width: none;
   width: min-content;
+}
+
+@media (max-width: 650px){
+  .form__select{
+    border-radius: 8px;
+    border: 2px solid #333;
+    order: 4;
+    width: 230px;
+  }
 }
 
 .form__button {
@@ -56,12 +96,18 @@
   font-weight: bold;
   border-radius: 8px;
   background-color: rgb(49 137 185);
-  /* background-color: rgb(255, 139, 61); */
   grid-area: B;
   justify-self: center;
 }
+
+@media (max-width: 650px){
+  .form__button{
+    align-self: center;
+    order: 5;
+  }
+}
+
 .form__label {
-    align-self: flex-end;
   color: whitesmoke;
   font-weight: bold;
 }
@@ -70,6 +116,18 @@
   grid-area: L1;
 }
 
+@media (max-width: 650px){
+  .form__label--value{
+    order: 1;
+  }
+}
+
 .form__label--currency {
   grid-area: L2;
+}
+
+@media (max-width: 650px){
+  .form__label--currency {
+    order: 3;
+  }
 }

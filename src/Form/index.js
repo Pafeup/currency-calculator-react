@@ -12,7 +12,7 @@ const Form = ({ onFormSubmit, inputValue, onInputChange, onCurrencyChange }) => 
     <label className="form__label form__label--currency">wybierz walutę</label>
 
 
-    <div className="input__container">
+    {/* <div className="input__container"> */}
       <input
         value={inputValue}
         onChange={onInputChange}
@@ -31,7 +31,7 @@ const Form = ({ onFormSubmit, inputValue, onInputChange, onCurrencyChange }) => 
         ))}
       </select>
 
-    </div>
+  
     <button className="form__button">Calculate</button>
 
 
