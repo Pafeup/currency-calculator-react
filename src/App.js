@@ -51,14 +51,14 @@ function App() {
         onFormSubmit={onFormSubmit}
         onCurrencyChange={onCurrencyChange}
       />
-    
-        <Result
-          finalResult={result.finalResult}
-          baseValue={result.baseValue}
-          currency={result.currency}
-          result={result}
-        />
-    
+
+      <Result
+        finalResult={result.finalResult}
+        baseValue={result.baseValue}
+        currency={result.currency}
+        result={result}
+      />
+
     </Container>
   );
 }
