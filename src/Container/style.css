@@ -7,7 +7,10 @@
   padding: 20px;
   margin: 0 auto;
   width: 600px;
-  box-shadow: 16px 16px 20px -12px rgba(66, 68, 90, 1);
+  box-shadow: 
+  16px 16px 20px -12px rgba(66, 68, 90, 1),
+   inset 25px 25px 28px -37px rgb(255, 255, 255),
+   inset -25px -25px 28px -37px rgba(0, 0, 0, 1);
 }
 
 @media (max-width: 650px) {
@@ -26,5 +29,5 @@
   background-color: rgba(181, 255, 63, 0.685);
   padding: 25px 20px 20px;
   margin: 0 auto;
-  box-shadow: inset 8px 8px 20px -12px rgba(66, 68, 90, 1);
+  box-shadow: inset 10px 10px 20px -12px rgba(66, 68, 90, 1);
 }

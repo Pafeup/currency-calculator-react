@@ -15,7 +15,6 @@
   padding: 30px;
   text-align: center;
   background-color: #555;
-  transition: 1s;
 }
 
 @media (max-width: 650px) {
@@ -79,8 +78,8 @@
   width: min-content;
 }
 
-@media (max-width: 650px){
-  .form__select{
+@media (max-width: 650px) {
+  .form__select {
     border-radius: 8px;
     border: 2px solid #333;
     order: 4;
@@ -98,10 +97,27 @@
   background-color: rgb(49 137 185);
   grid-area: B;
   justify-self: center;
+  box-shadow: inset 25px 25px 28px -37px rgb(255, 255, 255),
+    inset -25px -25px 28px -37px rgba(0, 0, 0, 1),
+    8px 8px 24px 0px rgba(0, 0, 0, 0.24);
+    transition: 0.2s;
 }
 
-@media (max-width: 650px){
-  .form__button{
+.form__button:hover {
+  background-color: hsl(201, 58%, 51%);
+  transform: scale(1.1);
+}
+
+.form__button:active{
+  background-color: hsl(201, 58%, 56%);
+  transition: 0.1s;
+  box-shadow: inset 30px 30px 71px -40px rgba(66, 68, 90, 1),
+    inset -30px -30px 28px -37px hsl(201, 58%, 56%),
+    8px 8px 24px 0px rgb(85 85 85);
+}
+
+@media (max-width: 650px) {
+  .form__button {
     align-self: center;
     order: 5;
   }
@@ -116,8 +132,8 @@
   grid-area: L1;
 }
 
-@media (max-width: 650px){
-  .form__label--value{
+@media (max-width: 650px) {
+  .form__label--value {
     order: 1;
   }
 }
@@ -126,7 +142,7 @@
   grid-area: L2;
 }
 
-@media (max-width: 650px){
+@media (max-width: 650px) {
   .form__label--currency {
     order: 3;
   }
