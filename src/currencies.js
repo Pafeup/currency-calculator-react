@@ -1,28 +1,33 @@
 const currencies = [
     {
         name: "€ Euro",
+        mark: "€",
         code: "EUR",
-
+        rate: 4.45,
     },
     {
         name: "$ Dolar amerykański",
-        code: "USD"
-
+        mark: "$",
+        code: "USD",
+        rate: 3.96,
     },
     {
         name: "£ Funt brytyjski",
-        code: "GBP"
-
+        mark: "£",
+        code: "GBP",
+        rate: 5.20,
     },
     {
         name: "₣ Frank szwajcarski",
-        code: "CHF"
-
+        mark: "₣",
+        code: "CHF",
+        rate: 4.62,
     },
     {
         name: "¥ Jen japoński",
-        code: "JPY"
-
+        mark: "¥",
+        code: "JPY",
+        rate: 0.03,
     },
 ]
-export {currencies}
+export { currencies }

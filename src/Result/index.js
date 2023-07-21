@@ -1,11 +1,14 @@
-import  "./style.css"
+import "./style.css"
 
-const Result = () => (
-    <div class="form__resultArea">
-                <span class="form__result js-result">
-                    00,00 zł = 00,00 €
-                </span>
-            </div>
-)
+const Result = ({result, finalResult, baseValue, currency }) => (
+  <div className="resultContainer">
+    {result.finalResult && (
+    <span className="resultArea ">
+      {baseValue} zł 
+      = <strong>{finalResult} {currency.mark}</strong>
+    </span>)}
+  </div>
 
-export default Result
+);
+
+export default Result;
