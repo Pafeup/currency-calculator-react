@@ -32,7 +32,7 @@ const Form = ({ onFormSubmit, inputValue, onInputChange, onCurrencyChange, calcu
     </select>
 
 
-    <button className="form__button">Calculate</button>
+    <button className="form__button">Przelicz</button>
 
 
 
