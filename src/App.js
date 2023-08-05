@@ -6,7 +6,7 @@ import Result from "./Result";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
-  const [currencySelect, setCurrencySelect] = useState(currencies[0]);
+  const [selectedCurrency, setSelectedCurrency] = useState(currencies[0]);
   const [result, setResult] = useState({
     finalResult: "",
     baseValue: 0,
@@ -18,22 +18,22 @@ function App() {
   };
 
   const onCurrencyChange = ({ target }) => {
-    const nameOfCurrency = target.value;
-    const selected = currencies.find((currency) => currency.name === nameOfCurrency);
-    setCurrencySelect(selected);
+    const currencyName = target.value;
+    const selected = currencies.find((currency) => currency.name === currencyName);
+    setSelectedCurrency(selected);
     console.log(`Została wybrana waluta ${selected.code}`);
   };
 
   const calculateCurrency = () => {
-    const inputValueFloat = parseFloat(inputValue);
-    const currencyCode = currencySelect.code;
+    const value = parseFloat(inputValue);
+    const currencyCode = selectedCurrency.code;
     const currency = currencies.find(({ code }) => code === currencyCode);
     const rate = currency.rate;
-    const calculatedResult = inputValueFloat / rate;
+    const calculatedResult = value / rate;
 
     setResult({
       finalResult: calculatedResult.toFixed(2),
-      baseValue: inputValueFloat.toFixed(2),
+      baseValue: value.toFixed(2),
       currency,
     });
   };
