@@ -1,14 +1,13 @@
 import "./style.css"
 
 const Result = ({ result }) => {
-  const { finalResult, baseValue, currency } = result
  
   return (
     <div className="resultContainer">
       {result.finalResult && (
         <span className="resultArea ">
-          {baseValue} zł
-          = <strong>{finalResult} {currency.mark}</strong>
+          {result.baseValue} zł
+          = <strong>{result.finalResult} {result.currency.mark}</strong>
         </span>)}
     </div>)
 
