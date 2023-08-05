@@ -53,9 +53,6 @@ function App() {
       />
 
       <Result
-        finalResult={result.finalResult}
-        baseValue={result.baseValue}
-        currency={result.currency}
         result={result}
       />
 
