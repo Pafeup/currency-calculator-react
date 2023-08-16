@@ -19,15 +19,19 @@
   }
 }
 
-.container__header {
-  border: 2px solid #333;
-  font-family: 'Quantico', sans-serif;
+.container__screen {
+  background-color: rgba(181, 255, 63, 0.685);
+  padding-bottom: 20px;
+  margin: 0px auto;
   border-radius: 10px;
+  border: 2px solid #333;
+  box-shadow: inset 10px 10px 20px -12px rgba(66, 68, 90, 1);
+}
+
+.container__header {
+  font-family: 'Quantico', sans-serif;
   text-align: center;
   font-size: 40px;
   font-style: italic;
-  background-color: rgba(181, 255, 63, 0.685);
-  padding: 25px 20px 20px;
-  margin: 0 auto;
-  box-shadow: inset 10px 10px 20px -12px rgba(66, 68, 90, 1);
+  margin: 20px 5px 5px;
 }
