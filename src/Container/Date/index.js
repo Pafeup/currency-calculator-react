@@ -12,7 +12,6 @@ const formatDate = (date) => date.toLocaleDateString(undefined, {
 });
 
 const CurrentDate = () => {
-
     const [date, setDate] = useState(new Date());
 
     useEffect(() => {
@@ -31,4 +30,5 @@ const CurrentDate = () => {
         </div>
     )
 }
+
 export default CurrentDate
