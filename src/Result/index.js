@@ -1,15 +1,15 @@
-import "./style.css"
+import { ResultArea, ResultContainer } from "./styled";
 
 const Result = ({ result }) => {
  
   return (
-    <div className="resultContainer">
+    <ResultContainer>
       {result.finalResult && (
-        <span className="resultArea ">
+        <ResultArea>
           {result.baseValue} zł
           = <strong>{result.finalResult} {result.currency.mark}</strong>
-        </span>)}
-    </div>)
+        </ResultArea>)}
+    </ResultContainer>)
 
 };
 
