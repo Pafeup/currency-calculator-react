@@ -1,13 +1,13 @@
-import "./style.css"
+// import "./style.css"
 import { currencies } from "../currencies"
+import { StyledForm, Label, Input, Select, Button} from "./styled"
 
 const Form = ({ onFormSubmit, inputValue, onInputChange, onCurrencyChange }) => (
-  <form
-    onSubmit={onFormSubmit}
-    className="form">
-    <label className="form__label form__label--value">wartość w PLN</label>
-    <label className="form__label form__label--currency">wybierz walutę</label>
-    <input
+  <StyledForm
+    onSubmit={onFormSubmit}>
+    <Label value>wartość w PLN</Label>
+    <Label select>wybierz walutę</Label>
+    <Input
       value={inputValue}
       onChange={onInputChange}
       type="number"
@@ -18,20 +18,15 @@ const Form = ({ onFormSubmit, inputValue, onInputChange, onCurrencyChange }) => 
       step={0.01}
       required
     />
-    <select onChange={onCurrencyChange} className="form__select">
+    <Select onChange={onCurrencyChange} className="form__select">
       {currencies.map(currency => (
         <option key={currency.name}>
           {currency.name}
         </option>
-      ))}
-    </select>
-    <button className="form__button">Przelicz</button>
-
-
-
-
-
-  </form>
+      ))};
+    </Select>
+    <Button className="form__button">Przelicz</Button>
+  </StyledForm>
 )
 
 export default Form
