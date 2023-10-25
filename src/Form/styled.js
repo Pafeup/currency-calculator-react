@@ -14,12 +14,12 @@ export const StyledForm = styled.form`
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    border: 2px solid #333;
+    border: 2px solid ${({ theme }) => theme.colors.MineShaft0};
     padding: 30px;
     text-align: center;
-    background-color: #555;
+    background-color: ${({ theme }) => theme.colors.Emperor};
 
-    @media (max-width: 650px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -29,21 +29,21 @@ export const StyledForm = styled.form`
 `;
 
 export const Label = styled.label`
-    color: whitesmoke;
+    color: ${({ theme }) => theme.colors.WhiteSmoke};
     font-weight: bold;
 
-    ${({value}) => value && css`
+    ${({ value }) => value && css`
         grid-area: "L1";
 
-        @media (max-width: 650px) {
+        @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
             order: 1;
         };
     `};
 
-    ${({select}) => select && css`
+    ${({ select }) => select && css`
         grid-area: "L2";
     
-        @media (max-width: 650px) {
+        @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
             order: 3;
         }
     `};
@@ -52,16 +52,16 @@ export const Label = styled.label`
 export const Input = styled.input`
     height: 48px;
     border-radius: 8px 0px 0px 8px;
-    border: 2px solid #333;
-    border-right: 1px double #ccc;
+    border: 2px solid ${({ theme }) => theme.colors.MineShaft0};
+    border-right: 1px double ${({ theme }) => theme.colors.Silver};
     padding-left: 10px;
     padding: 10px;
     outline: none;
     width: 230px;
 
-    @media (max-width: 650px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         border-radius: 8px;
-        border: 2px solid #333;
+        border: 2px solid ${({ theme }) => theme.colors.MineShatf0};
         padding: 10px;
         outline: none;
         width: 230px;
@@ -72,16 +72,16 @@ export const Input = styled.input`
 
 export const Select = styled.select`
     border-radius: 0px 8px 8px 0px;
-    border: 2px solid #333;
+    border: 2px solid ${({ theme }) => theme.colors.MineShaft0};
     border-left: 0px;
     padding: 10px;
     outline: none;
     max-width: none;
     width: min-content;
 
-    @media (max-width: 650px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         border-radius: 8px;
-        border: 2px solid #333;
+        border: 2px solid ${({ theme }) => theme.colors.MineShaft0};
         order: 4;
         width: 230px;
     };
@@ -94,28 +94,28 @@ export const Button = styled.button`
     border: 0px;
     font-weight: bold;
     border-radius: 8px;
-    background-color: rgb(49 137 185);
+    background-color: ${({ theme }) => theme.colors.BostonBlue};
     grid-area: B;
     justify-self: center;
-    box-shadow: inset 25px 25px 28px -37px rgb(255, 255, 255),
-                inset -25px -25px 28px -37px rgba(0, 0, 0, 1),
-                8px 8px 24px 0px rgba(0, 0, 0, 0.24);
+    box-shadow: inset 25px 25px 28px -37px ${({ theme }) => theme.colors.White}, 
+                inset -25px -25px 28px -37px ${({ theme }) => theme.colors.Black},
+                8px 8px 24px 0px ${({ theme }) => theme.colors.MineShaft0};
     transition: 0.2s;
 
     &:hover {
-        background-color: hsl(201, 58%, 51%);
+        background-color: ${({ theme }) => theme.colors.Shakespeare};
         transform: scale(1.1);
     };
 
     &:active {
-        background-color: hsl(201, 58%, 56%);
+        background-color: ${({ theme }) => theme.colors.Shakespeare__active}; 
         transition: 0.1s;
-        box-shadow: inset 30px 30px 71px -40px rgba(66, 68, 90, 1),
-                    inset -30px -30px 28px -37px hsl(201, 58%, 56%),
-                    8px 8px 24px 0px rgb(85 85 85);
+        box-shadow: inset 30px 30px 71px -40px ${({ theme }) => theme.colors.GunPowder},
+                    inset -30px -30px 28px -37px ${({ theme }) => theme.colors.ShakeSpeare__active},
+                    8px 8px 24px 0px ${({ theme }) => theme.colors.Emperor};
     };
 
-    @media (max-width: 767px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         align-self: center;
         order: 5;
     };

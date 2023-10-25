@@ -3,6 +3,8 @@ import { currencies } from "./currencies";
 import Container from "./Container";
 import Form from "./Form";
 import Result from "./Result";
+import { ThemeProvider } from "styled-components";
+import theme from "./theme";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
@@ -44,19 +46,19 @@ function App() {
   };
 
   return (
-    <Container>
-      <Form
-        inputValue={inputValue}
-        onInputChange={onInputChange}
-        onFormSubmit={onFormSubmit}
-        onCurrencyChange={onCurrencyChange}
-      />
-
-      <Result
-        result={result}
-      />
-
-    </Container>
+    <ThemeProvider theme={theme}>
+      <Container>
+        <Form
+          inputValue={inputValue}
+          onInputChange={onInputChange}
+          onFormSubmit={onFormSubmit}
+          onCurrencyChange={onCurrencyChange}
+        />
+        <Result
+          result={result}
+        />
+      </Container>
+    </ThemeProvider>
   );
 }
 

@@ -5,27 +5,27 @@ export const StyledContainer = styled.main`
     border-radius: 10px;
     text-align: center;
     font-size: large;
-    background-color: #444;
+    background-color: ${({ theme }) => theme.colors.Tundora};
     padding: 20px;
     margin: 0 auto;
     width: 600px;
     box-shadow: 
-        16px 16px 20px -12px rgba(66, 68, 90, 1),
-        inset 25px 25px 28px -37px rgb(255, 255, 255),
-        inset -25px -25px 28px -37px rgba(0, 0, 0, 1);
+        16px 16px 20px -12px ${({ theme }) => theme.colors.GunPowder},
+        inset 25px 25px 28px -37px ${({ theme }) => theme.colors.White},
+        inset -25px -25px 28px -37px ${({ theme }) => theme.colors.Black};
 
-        @media (max-width: 650px) {
+        @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
             max-width: 350px;
         };
 `;
 
 export const Screen = styled.div`
-    background-color: rgba(181, 255, 63, 0.685);
+    background-color: ${({ theme }) => theme.colors.GreenYellow};
     padding-bottom: 20px;
     margin: 0px auto;
     border-radius: 10px;
     border: 2px solid #333;
-    box-shadow: inset 10px 10px 20px -12px rgba(66, 68, 90, 1);
+    box-shadow: inset 10px 10px 20px -12px ${({ theme }) => theme.colors.GunPowder};
 `;
 
 export const Title = styled.h1`
