@@ -1,14 +1,14 @@
-import "./style.css"
 import Clock from "../Clock"
+import { StyledContainer, Screen, Title } from "./styled"
 
 const Container = ({ children }) => (
-    <main className="container">
-        <div className="container__screen">
+    <StyledContainer>
+        <Screen>
             <Clock />
-            <h1 className="container__header">Kalkulator walut</h1>
-        </div>
+            <Title>Kalkulator walut</Title>
+        </Screen>
         {children}
-    </main>
-)
+    </StyledContainer>
+);
 
 export default Container

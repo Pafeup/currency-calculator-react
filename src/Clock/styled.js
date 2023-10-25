@@ -7,4 +7,4 @@ export const StyledClock = styled.div`
     padding: 5px;
     font-family: 'Quantico', sans-serif;
     text-align: end;
-`
+`;

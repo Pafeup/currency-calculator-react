@@ -118,5 +118,5 @@ export const Button = styled.button`
     @media (max-width: 767px) {
         align-self: center;
         order: 5;
-    }
+    };
 `;
