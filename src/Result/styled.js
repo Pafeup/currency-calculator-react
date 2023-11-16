@@ -8,6 +8,6 @@ export const ResultContainer = styled.div`
 
 export const ResultArea = styled.span`
     color: white;
-    text-shadow: 0px 0px 15px ${({ theme }) => theme.colors.GreenYellow};
+    text-shadow: 0px 0px 15px ${({ theme }) => theme.colors.greenYellow};
     font-size: larger;
 `;
